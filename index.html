@@ -1,203 +1,105 @@
-
 <!DOCTYPE html>
 <html lang="kk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Менің сайтым</title>
+<meta name="theme-color" content="#0b1830">
+<title>9 «Ә» сыныбы</title>
 <style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b1020;
-  color: #f8fafc;
-}
-
-header {
-  padding: 22px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #252944;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #c4b5fd;
-}
-
-nav a {
-  color: #d1d5e8;
-  text-decoration: none;
-  margin-left: 16px;
-  font-size: 14px;
-}
-
-.hero {
-  text-align: center;
-  padding: 90px 20px 65px;
-  background:
-    radial-gradient(ellipse at top, #34205f 0%, #0b1020 68%);
-}
-
-.tag {
-  color: #c4b5fd;
-  letter-spacing: 3px;
-  font-size: 12px;
-}
-
-h1 {
-  font-size: clamp(36px, 8vw, 60px);
-  line-height: 1.12;
-  margin: 22px auto;
-  max-width: 750px;
-}
-
-.gradient {
-  background: linear-gradient(90deg, #a78bfa, #67e8f9);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.hero p {
-  max-width: 520px;
-  margin: 0 auto;
-  line-height: 1.8;
-  color: #b9bfd3;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 28px;
-  padding: 15px 25px;
-  background: linear-gradient(100deg, #7c3aed, #6366f1);
-  color: white;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform .2s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-}
-
-section {
-  padding: 35px 7% 70px;
-  text-align: center;
-}
-
-section h2 {
-  font-size: 30px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns:
-    repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-  max-width: 900px;
-  margin: 30px auto 0;
-}
-
-.card {
-  text-align: left;
-  background: linear-gradient(145deg, #1b2340, #131a2e);
-  border: 1px solid #303858;
-  padding: 26px;
-  border-radius: 20px;
-  transition: transform .25s, border-color .25s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #8b5cf6;
-}
-
-.emoji {
-  font-size: 32px;
-}
-
-.card p {
-  color: #b9bfd3;
-  line-height: 1.7;
-}
-
-footer {
-  border-top: 1px solid #252944;
-  text-align: center;
-  padding: 25px;
-  color: #929bb5;
-  font-size: 13px;
-}
-
-@media (max-width: 480px) {
-  header { padding: 18px 5%; }
-  nav a { margin-left: 9px; font-size: 12px; }
-  .hero { padding-top: 70px; }
-  section { padding-left: 5%; padding-right: 5%; }
-}
+:root{--navy:#0b1830;--panel:rgba(18,34,60,.92);--gold:#f4c86a;--cream:#fff4d8;--muted:#d5deed}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:Arial,sans-serif;color:white;background-color:var(--navy);background-image:linear-gradient(rgba(5,13,28,.76),rgba(5,13,28,.88)),url('logo.png');background-position:center center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed}
+header{text-align:center;padding:22px 16px;background:rgba(5,13,28,.88);border-bottom:1px solid rgba(244,200,106,.5)}
+.brand{margin:0;color:var(--gold);font-size:clamp(24px,6vw,34px)}
+.subtitle{margin:8px 0 0;color:var(--muted)}
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;padding:14px 10px;background:rgba(7,16,33,.9);position:sticky;top:0;z-index:5;backdrop-filter:blur(10px)}
+nav a{color:var(--cream);text-decoration:none;padding:10px 13px;border:1px solid rgba(244,200,106,.35);border-radius:12px;font-size:14px}
+nav a:hover{background:rgba(244,200,106,.15)}
+.hero{text-align:center;padding:64px 18px 38px}
+.hero h1{color:var(--gold);font-size:clamp(38px,9vw,60px);margin:0 0 16px;text-shadow:0 3px 18px rgba(0,0,0,.4)}
+.hero p{max-width:650px;margin:0 auto 22px;font-size:18px;line-height:1.7;color:var(--cream)}
+.pill{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid rgba(244,200,106,.65);color:var(--gold);background:rgba(8,20,40,.7)}
+main{width:min(1000px,100%);margin:auto;padding:0 15px 35px}
+section{scroll-margin-top:90px;margin:24px 0}
+.card{padding:24px 20px;border:1px solid rgba(244,200,106,.35);border-radius:20px;background:var(--panel);box-shadow:0 12px 35px rgba(0,0,0,.2);backdrop-filter:blur(8px)}
+h2{margin:0 0 18px;color:var(--gold);text-align:center;font-size:27px}
+.intro{text-align:center;color:var(--muted);line-height:1.7}
+.toolbar{display:flex;gap:10px;margin:0 0 16px}
+input{width:100%;padding:12px 14px;border-radius:11px;border:1px solid #52617a;background:#0b1830;color:white;font-size:16px}
+.students{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;padding:0;list-style:none;counter-reset:student}
+.students li{counter-increment:student;padding:13px 14px;border-radius:12px;border:1px solid rgba(244,200,106,.23);background:rgba(255,255,255,.045);color:#fff4d8}
+.students li::before{content:counter(student) ". ";color:var(--gold);font-weight:bold}
+.day-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:18px}
+.day-tabs button{border:1px solid rgba(244,200,106,.55);border-radius:11px;padding:11px 14px;background:#172a49;color:var(--cream);cursor:pointer;font-size:15px}
+.day-tabs button.active{background:var(--gold);color:#172039;font-weight:bold}
+.schedule-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:270px}
+th,td{text-align:left;padding:13px 12px;border-bottom:1px solid rgba(255,255,255,.12)}
+th{color:var(--gold);background:rgba(244,200,106,.08)}td:first-child{width:85px;color:var(--gold);font-weight:bold}
+.note{color:#cbd5e1;font-size:13px;line-height:1.6}
+footer{text-align:center;padding:25px 15px;color:var(--muted);background:rgba(5,13,28,.9);border-top:1px solid rgba(244,200,106,.3)}
+@media(max-width:500px){.hero{padding-top:48px}.card{padding:20px 14px}nav{gap:7px}nav a{padding:9px 10px;font-size:13px}}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="logo">✦ MY WEBSITE</div>
-  <nav>
-    <a href="#home">Басты бет</a>
-    <a href="#about">Мен туралы</a>
-  </nav>
+<h2 class="brand">9 «Ә» сыныбы</h2>
+<p class="subtitle">Д. Қонаев атындағы мектеп-гимназиясы</p>
 </header>
-
+<nav aria-label="Сайт бөлімдері">
+<a href="#home">Басты бет</a><a href="#students">Оқушылар</a><a href="#schedule">Сабақ кестесі</a><a href="#teachers">Мұғалімдер</a>
+</nav>
 <main>
-  <div class="hero" id="home">
-    <div class="tag">WELCOME TO MY WORLD</div>
-    <h1>Жаңа идеялар.<br>
-      <span class="gradient">Жаңа мүмкіндіктер.</span>
-    </h1>
-    <p>
-      Менің алғашқы жеке сайтыма қош келдің!
-      Бұл — өз қолыммен жасаған шығармашылық жобам.
-    </p>
-    <a class="btn" href="#about">✨ Танысып көр</a>
-  </div>
-
-  <section id="about">
-    <h2>Менің әлемім</h2>
-    <p style="color:#aeb6ce">
-      Мұнда мен туралы және қызығушылықтарым туралы.
-    </p>
-
-    <div class="cards">
-      <div class="card">
-        <div class="emoji">🎨</div>
-        <h3>Шығармашылық</h3>
-        <p>Жаңа идеялар ойлап тауып, өз жобаларымды дамытамын.</p>
-      </div>
-
-      <div class="card">
-        <div class="emoji">🚀</div>
-        <h3>Менің мақсатым</h3>
-        <p>Үйрену, тәжірибе жинау және жаңа мүмкіндіктер ашу.</p>
-      </div>
-
-      <div class="card">
-        <div class="emoji">💻</div>
-        <h3>Технология</h3>
-        <p>Мен өз сайтымды телефон арқылы жасап жатырмын!</p>
-      </div>
-    </div>
-  </section>
+<section class="hero" id="home">
+<h1>9 «Ә» сыныбы</h1>
+<p>Біздің сыныптың сайтына қош келдің! 🎓<br>Бір сынып — бір команда!</p>
+<span class="pill">Білім • Достық • Болашақ</span>
+</section>
+<section class="card" id="students">
+<h2>👥 Біздің оқушылар</h2><p class="intro">9 «Ә» сыныбының оқушылары — алфавиттік ретпен.</p>
+<div class="toolbar"><input id="studentSearch" type="search" placeholder="Оқушының атын іздеу..." aria-label="Оқушы іздеу"></div>
+<ol class="students" id="studentList">
+<li>Арихов Айдын</li><li>Әділбек Бұлбұл</li><li>Баймұқаш Кәрім</li><li>Бақдәулетова Фатима</li><li>Бекжан Жанайым</li><li>Дайырова Назерке</li><li>Ерболат Нұрай</li><li>Еркінова Аружан</li><li>Жалғасова Адема</li><li>Жұмабай Айару</li><li>Зейнолла Айсұлтан</li><li>Кенжебай Аружан</li><li>Қайсарұлы Бақдаулет</li><li>Мажен Фатима</li><li>Нұртай Мадина</li><li>Өтебай Айша</li><li>Сағымжан Жанарыс</li><li>Сисенбаева Асем</li><li>Скаков Ернар</li><li>Сүйінтай Айсара</li><li>Тұрлан Айсана</li>
+</ol><p class="note" id="studentCount">Барлығы: 21 оқушы</p>
+</section>
+<section class="card" id="schedule">
+<h2>📚 Сабақ кестесі</h2><p class="intro">Күнді таңдасаң, сол күннің сабақтары шығады.</p>
+<div class="day-tabs" role="group" aria-label="Апта күндері">
+<button class="active" data-day="0">Дүйсенбі</button><button data-day="1">Сейсенбі</button><button data-day="2">Сәрсенбі</button><button data-day="3">Бейсенбі</button><button data-day="4">Жұма</button>
+</div>
+<div class="schedule-wrap"><table><thead><tr><th>Сабақ</th><th>Пән</th></tr></thead><tbody id="scheduleBody"></tbody></table></div>
+<p class="note">Сабақтардың басталу уақыты кейін қосылады.</p>
+</section>
+<section class="card" id="teachers"><h2>👩‍🏫 Мұғалімдер мен пәндер</h2><p class="intro">Мұғалімдердің аты-жөні мен пәндерін кейін қосамыз.</p></section>
 </main>
-
-<footer>
-  © 2026 MY WEBSITE · Жүрекпен жасалды 💜
-</footer>
-
+<footer>© 2026 · 9 «Ә» сыныбы</footer>
+<script>
+const schedules=[
+["Қазақ тілі","Химия","Алгебра","Орыс тілі мен әдебиеті","Шетел тілі","Биология","География"],
+["Шетел тілі","География","Геометрия","Қазақ әдебиеті","Биология","Домбыра, дастан","Дене шынықтыру","Физика"],
+["Орыс тілі мен әдебиеті","Химия","Алгебра","Физика","Шетел тілі","Қазақ тілі","Қазақстан тарихы","Құқық негіздері"],
+["Физика","Алгебра","Дене шынықтыру","Шетел тілі","Биология (Ф)","Дүниежүзі тарихы","Қазақ әдебиеті","Көркем еңбек"],
+["Дене шынықтыру","Алгебра (Ф)","Сөз өнері","Физика","Орыс тілі мен әдебиеті","Практикалық қазақ тілі","Қазақстан тарихы","Информатика"]
+];
+const dayButtons=document.querySelectorAll(".day-tabs button");
+const scheduleBody=document.getElementById("scheduleBody");
+function showSchedule(dayIndex){
+scheduleBody.innerHTML="";
+schedules[dayIndex].forEach((subject,index)=>{
+const row=document.createElement("tr"),numberCell=document.createElement("td"),subjectCell=document.createElement("td");
+numberCell.textContent=(index+1)+"-сабақ";subjectCell.textContent=subject;row.append(numberCell,subjectCell);scheduleBody.appendChild(row);
+});
+dayButtons.forEach((button,index)=>{button.classList.toggle("active",index===dayIndex);button.setAttribute("aria-pressed",index===dayIndex?"true":"false");});
+}
+dayButtons.forEach(button=>button.addEventListener("click",()=>showSchedule(Number(button.dataset.day))));
+showSchedule(0);
+document.getElementById("studentSearch").addEventListener("input",function(){
+const query=this.value.trim().toLocaleLowerCase("kk"),students=document.querySelectorAll("#studentList li");let visible=0;
+students.forEach(student=>{const match=student.textContent.toLocaleLowerCase("kk").includes(query);student.hidden=!match;if(match)visible++;});
+document.getElementById("studentCount").textContent=query?"Табылды: "+visible+" оқушы":"Барлығы: 21 оқушы";
+});
+</script>
 </body>
-    </html>
+                                             </html>
+  
   
 
