@@ -98,6 +98,57 @@ students.forEach(student=>{const match=student.textContent.toLocaleLowerCase("kk
 document.getElementById("studentCount").textContent=query?"Табылды: "+visible+" оқушы":"Барлығы: 21 оқушы";
 });
 </script>
+<!-- Мұғалімдер бөлімі -->
+<section id="teachers" class="teachers-section">
+  <h2>👩‍🏫 Біздің мұғалімдер</h2>
+  <p>9 «Ә» сыныбының пән мұғалімдері</p>
+  <div class="teacher-table-wrap">
+    <table class="teacher-table">
+      <thead><tr><th>№</th><th>Пән</th><th>Мұғалімнің аты-жөні</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Қазақ тілі</td><td>Ажибаева Гульзия</td></tr>
+        <tr><td>2</td><td>Қазақ әдебиеті</td><td>Ажибаева Гульзия</td></tr>
+        <tr><td>3</td><td>Орыс тілі мен әдебиеті</td><td>Абдикова Гульшат</td></tr>
+        <tr><td>4</td><td>Шетел тілі</td><td>Боқаева Алмагүл</td></tr>
+        <tr><td>5</td><td>Алгебра</td><td>Ержанов Шынтас</td></tr>
+        <tr><td>6</td><td>Геометрия</td><td>Ержанов Шынтас</td></tr>
+        <tr><td>7</td><td>Информатика</td><td>Әбілтай Нұрбол</td></tr>
+        <tr><td>8</td><td>Физика</td><td>Жұмахан Айбану</td></tr>
+        <tr><td>9</td><td>Химия</td><td>Тамбаева Камшат</td></tr>
+        <tr><td>10</td><td>Биология</td><td>Ақтан Әділет</td></tr>
+        <tr><td>11</td><td>География</td><td>Кеулова Айгерим</td></tr>
+        <tr><td>12</td><td>Қазақстан тарихы</td><td>Сыдыкова Алтынгул</td></tr>
+        <tr><td>13</td><td>Дүниежүзі тарихы</td><td>Сыдыкова Алтынгул</td></tr>
+        <tr><td>14</td><td>Құқық негіздері</td><td>Мамбетова Дамира</td></tr>
+        <tr><td>15</td><td>Дене шынықтыру</td><td>Калитов Бағдаулет</td></tr>
+        <tr><td>16</td><td>Көркем еңбек</td><td>Темиралина Шынар</td></tr>
+        <tr><td>17</td><td>Домбыра, дастан</td><td>Шинтемиров Фархат</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<style>
+  .teachers-section {
+    margin: 25px auto;
+    padding: 20px;
+    max-width: 900px;
+    color: white;
+    background: rgba(15, 25, 65, 0.92);
+    border: 1px solid #d6b65c;
+    border-radius: 16px;
+    text-align: center;
+  }
+  .teachers-section h2 { color: #f1d783; }
+  .teacher-table-wrap { width: 100%; overflow-x: auto; margin-top: 15px; }
+  .teacher-table { width: 100%; border-collapse: collapse; text-align: left; }
+  .teacher-table th, .teacher-table td {
+    padding: 10px;
+    border: 1px solid rgba(214, 182, 92, 0.55);
+  }
+  .teacher-table th { color: #f1d783; background: rgba(255, 255, 255, 0.08); }
+  .teacher-table tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.06); }
+                                                                            </style>
 </body>
-  </html>
-  
+</html>
+                                                  
