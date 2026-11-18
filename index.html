@@ -100,8 +100,6 @@ function showSchedule(dayIndex){
   });
   }
 
-dayButtons.forEach((button,index)=>{button.classList.toggle("active",index===dayIndex);button.setAttribute("aria-pressed",index===dayIndex?"true":"false");});
-}
 dayButtons.forEach(button=>button.addEventListener("click",()=>showSchedule(Number(button.dataset.day))));
 showSchedule(0);
 document.getElementById("studentSearch").addEventListener("input",function(){
