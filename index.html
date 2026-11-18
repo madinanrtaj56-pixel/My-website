@@ -149,6 +149,52 @@ document.getElementById("studentCount").textContent=query?"Табылды: "+vis
   .teacher-table th { color: #f1d783; background: rgba(255, 255, 255, 0.08); }
   .teacher-table tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.06); }
                                                                             </style>
-</body>
+<!-- Сабақ уақыты -->
+<section class="lesson-times">
+  <h2>⏰ Сабақ уақыттары</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Сабақ</th>
+        <th>Басталуы</th>
+        <th>Аяқталуы</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1-сабақ</td><td>08:00</td><td>08:40</td></tr>
+      <tr><td>2-сабақ</td><td>08:45</td><td>09:25</td></tr>
+      <tr><td>3-сабақ</td><td>09:30</td><td>10:10</td></tr>
+      <tr><td>4-сабақ</td><td>10:15</td><td>10:55</td></tr>
+      <tr><td>5-сабақ</td><td>11:00</td><td>11:40</td></tr>
+      <tr><td>6-сабақ</td><td>11:45</td><td>12:25</td></tr>
+      <tr><td>7-сабақ</td><td>12:30</td><td>13:10</td></tr>
+      <tr><td>8-сабақ</td><td>13:15</td><td>13:55</td></tr>
+    </tbody>
+  </table>
+  <p>📌 Бір сабақ — 40 минут | Үзіліс — 5 минут</p>
+</section>
+
+<style>
+.lesson-times {
+  margin: 25px auto;
+  padding: 20px;
+  max-width: 900px;
+  color: white;
+  background: rgba(15, 25, 65, 0.92);
+  border: 1px solid #d6b65c;
+  border-radius: 16px;
+  text-align: center;
+}
+.lesson-times h2 { color: #f1d783; }
+.lesson-times table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.lesson-times th, .lesson-times td {
+  padding: 10px;
+  border: 1px solid #d6b65c;
+}
+.lesson-times th { color: #f1d783; }
+  </style></body>
 </html>
                                                   
