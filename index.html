@@ -66,7 +66,7 @@ footer{text-align:center;padding:25px 15px;color:var(--muted);background:rgba(5,
 <div class="day-tabs" role="group" aria-label="Апта күндері">
 <button class="active" data-day="0">Дүйсенбі</button><button data-day="1">Сейсенбі</button><button data-day="2">Сәрсенбі</button><button data-day="3">Бейсенбі</button><button data-day="4">Жұма</button>
 </div>
-<div class="schedule-wrap"><table><thead><tr><th>Сабақ</th><th>Пән</th></tr></thead><tbody id="scheduleBody"></tbody></table></div>
+<div class="schedule-wrap"><table><thead><tr><th>Сабақ</th><th>Пән</th><th>Уақыты</th></tr></thead><tbody id="scheduleBody"></tbody></table></div>
 </section>
 </section>
 </main>
@@ -81,7 +81,18 @@ const schedules=[
 ];
 const dayButtons=document.querySelectorAll(".day-tabs button");
 const scheduleBody=document.getElementById("scheduleBody");
-function showSchedule(dayIndex){
+const lessonTimes = [
+  "08:00–08:40",
+  "08:45–09:25",
+  "09:30–10:10",
+  "10:15–10:55",
+  "11:00–11:40",
+  "11:45–12:25",
+  "12:30–13:10",
+  "13:15–13:55"
+];
+
+  function showSchedule(dayIndex){
   scheduleBody.innerHTML = "";
 
   schedules[dayIndex].forEach((subject, index) => {
@@ -89,13 +100,15 @@ function showSchedule(dayIndex){
 
     const numberCell = document.createElement("td");
     const subjectCell = document.createElement("td");
-
+    const timeCell = document.createElement("td");
+    
     numberCell.textContent = (index + 1) + "-сабақ";
     subjectCell.textContent = subject
-
+    timeCell.textContent = lessonTimes[index] || "—";
+   
     row.appendChild(numberCell);
     row.appendChild(subjectCell);
-
+    row.appendChild(timeCell);
     scheduleBody.appendChild(row);
   });
   }
