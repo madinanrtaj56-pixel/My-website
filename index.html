@@ -46,6 +46,8 @@ footer{text-align:center;padding:25px 15px;color:var(--muted);background:rgba(5,
 <p class="subtitle">Д. Қонаев атындағы мектеп-гимназиясы</p>
 </header>
 <nav aria-label="Сайт бөлімдері">
+<a href="#achievements">🏆 Жетістіктер</a>
+</nav>
 <a href="#home">Басты бет</a><a href="#students">Оқушылар</a><a href="#schedule">Сабақ кестесі</a><a href="#teachers">Мұғалімдер</a>
 </nav>
 <main>
@@ -69,6 +71,23 @@ footer{text-align:center;padding:25px 15px;color:var(--muted);background:rgba(5,
 <div class="schedule-wrap"><table><thead><tr><th>Сабақ</th><th>Пән</th><th>Уақыты</th></tr></thead><tbody id="scheduleBody"></tbody></table></div>
 </section>
 </section>
+<section class="card" id="achievements">
+  <h2>🏆 Біздің жетістіктеріміз</h2>
+  <p>Сыныбымыздың жетістіктері мен марапаттары</p>
+
+  <div class="gallery">
+    <img src="1000067794.jpg" alt="Сынып жетістігі">
+    <img src="1000067793.jpg" alt="Оқушы жетістігі">
+    <img src="1000067790.jpg" alt="Оқушы жетістігі">
+    <img src="1000067788.jpg" alt="Оқушы жетістігі">
+    <img src="1000067787.jpg" alt="Оқушы жетістігі">
+    <img src="1000067795.jpg" alt="Оқушы жетістігі">
+  </div>
+
+  <video controls width="100%">
+    <source src="1000067774.mp4" type="video/mp4">
+  </video>
+  </section>
 </main>
 <footer>© 2026 · 9 «Ә» сыныбы</footer>
 <script>
@@ -193,6 +212,26 @@ document.getElementById("studentCount").textContent=query?"Табылды: "+vis
   border: 1px solid #d6b65c;
 }
 .lesson-times th { color: #f1d783; }
+  
+  .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#achievements video {
+  margin-top: 20px;
+  border-radius: 15px;
+    }
   </style></body>
 </html>
                                                   
